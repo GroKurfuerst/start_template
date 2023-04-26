@@ -11,6 +11,6 @@ do
 done
 
 #Run the container
-sudo docker run -p $TTS_API_PORT:6788 \
+sudo docker run -p $TEMPLATEBOT_API_PORT:6788 \
                 --name templatebot-api-container \
                 templatebot-api
