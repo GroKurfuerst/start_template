@@ -15,7 +15,7 @@ do
 done
 
 #Set up endpoints
-FRONT_END_LINK="http://$public_ipv4:$EDUBOT_WEBSITE_PORT/pron_fluency_score"
+FRONT_END_LINK="http://$public_ipv4:$EDUBOT_WEBSITE_PORT"
 PRON_FLUENCY_SCORING_API="http://$public_ipv4:$EVAL_API_PORT/pron_fluency_score"
 REPORT_GEN_API="http://$public_ipv4:$EVAL_API_PORT/score_report"
 TTS_API="http://$public_ipv4:$TTS_API_PORT/tts"
