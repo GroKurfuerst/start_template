@@ -19,7 +19,7 @@ FRONT_END_LINK="http://$public_ipv4:$EDUBOT_WEBSITE_PORT"
 PRON_FLUENCY_SCORING_API="http://$public_ipv4:$EVAL_API_PORT/pron_fluency_score"
 REPORT_GEN_API="http://$public_ipv4:$EVAL_API_PORT/score_report"
 TTS_API="http://$public_ipv4:$TTS_API_PORT/tts"
-ASR_API="https://$public_ipv4:$ASR_API_PORT/home"
+ASR_API="http://$public_ipv4:$ASR_API_PORT/home"
 
 #Run the container
 sudo docker run -e FRONT_END_LINK=$FRONT_END_LINK \
