@@ -44,4 +44,4 @@ start_templatebot_api:
 
 -a templatebot-api port
 
-bash start_eval_api.sh -a 6788 
+bash start_templatebot_api.sh -a 6788 
