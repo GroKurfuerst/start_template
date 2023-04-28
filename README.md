@@ -1,5 +1,14 @@
 # start_template
 
+start_edubot_website(have default parameters):
+-a edubot-website port
+-b api-gateway host
+-c api-gateway port
+
+bash start_edubot_webiste.sh -a xxx \
+                             -b xxx \
+                             -c xxx
+
 start_api_gateway:
 
 -a eval-api port
