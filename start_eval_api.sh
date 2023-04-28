@@ -10,8 +10,23 @@ do
     esac
 done
 
+#Download data
+if [ ! -d $HOME/data/kaldi ]; then
+    echo "Kaldi data not found"
+    if [ ! -f $HOME/data/kaldi.tar.gz ]; then
+        echo "Kaldi tar not found, prepare to download"
+        aws s3api get-object --bucket docker-container-data --key kaldi.tar.gz $HOME/data/kaldi.tar.gz
+    else
+        echo "Kaldi tar found"
+    tar -zxvf $HOME/data/kaldi.tar.gz
+    fi
+else
+    echo "Data not found"
+fi
+
 #Run the container
 sudo docker run -p $EVAL_API_PORT:6001 \
                 --gpus all \
                 --name eval-api-container \
+                -v $HOME/data/kaldi:/app/kaldi
                 eval-api
