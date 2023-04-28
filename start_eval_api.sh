@@ -28,5 +28,5 @@ fi
 sudo docker run -p $EVAL_API_PORT:6001 \
                 --gpus all \
                 --name eval-api-container \
-                -v $HOME/data/kaldi:/app/kaldi
+                -v $HOME/data/kaldi:/app/kaldi \
                 eval-api
