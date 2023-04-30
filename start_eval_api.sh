@@ -2,6 +2,8 @@
 # public_ipv4=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 # public_ipv4="15.164.178.173"
 
+EVAL_API_PORT=6001
+
 #Fetch configuration
 while getopts a: flag
 do
