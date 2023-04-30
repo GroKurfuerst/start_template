@@ -1,8 +1,8 @@
-public_ipv4=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+# public_ipv4=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 
 EDUBOT_WEBSITE_PORT=3000
-API_GATEWAY_HOST=$public_ipv4
-API_GATEWAY_PORT=19528
+API_GATEWAY_HOST='devbox.articulateai.cn'
+API_GATEWAY_PORT=444
 
 #Fetch configuration
 while getopts a:b:c: flag
