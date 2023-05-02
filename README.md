@@ -5,52 +5,38 @@ start_edubot_website(have default parameters):
 -b api-gateway host
 -c api-gateway port
 
-bash start_edubot_webiste.sh -a xxx \
-                             -b xxx \
-                             -c xxx
+bash start_edubot_webiste.sh -a ${edubot-website port} \
+                             -b ${api-gateway host} \
+                             -c ${api-gateway port}
 
 start_api_gateway:
 
--a eval-api port
--b tts-api port
--c asr-api port
--d api-gateway port
--e edubot-website port
-
-bash start_api_gateway.sh -a 6001 \
-                          -b 8061 \
-                          -c 8067 \
-                          -d 19528 \
-                          -e 3000
+bash start_api_gateway.sh -a ${eval-api port} \
+                          -b ${tts-api port} \
+                          -c ${asr-api port} \
+                          -d ${api-gateway port} \
+                          -e ${edubot-website port}
 
 
 
 start_eval_api:
 
--a eval-api port
-
-bash start_eval_api.sh -a 6001 
+bash start_eval_api.sh -a ${eval-api port} 
 
 
 
 start_tts_api:
 
--a tts-api port
-
-bash start_tts_api.sh -a 8061
+bash start_tts_api.sh -a ${tts-api port}
 
 
 
 start_asr_api:
 
--a asr-api port
-
-bash start_asr_api.sh -a 8067 
+bash start_asr_api.sh -a ${asr-api port}
 
 
 
 start_templatebot_api:
 
--a templatebot-api port
-
-bash start_templatebot_api.sh -a 6788 
+bash start_templatebot_api.sh -a ${templatebot-api port} 

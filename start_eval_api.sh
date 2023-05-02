@@ -20,7 +20,7 @@ if [ ! -d $HOME/data/kaldi ]; then
         sudo aws s3api get-object --bucket docker-container-data --key kaldi.tar.gz $HOME/data/kaldi.tar.gz
     else
         echo "Kaldi tar found"
-    sudo tar -zxvf $HOME/data/kaldi.tar.gz -C $HOME/data/
+    sudo tar -xzvf $HOME/data/kaldi.tar.gz -C $HOME/data/
     fi
 else
     echo "Data not found"
@@ -31,4 +31,14 @@ sudo docker run -p $EVAL_API_PORT:6001 \
                 --gpus all \
                 --name eval-api-container \
                 -v $HOME/data/kaldi:/app/kaldi \
+                -v $HOME/data/nltk_data:/root/nltk_data \
+                -v $HOME/data/intel:/opt/intel \
+                eval-api
+
+sudo docker run -p 6001:6001 \
+                --gpus all \
+                --name eval-api-container \
+                -v $HOME/data/nltk_data:/root/nltk_data \
+                -v $HOME/data/kaldi:/app/kaldi \
+                -v $HOME/data/intel:/opt/intel \
                 eval-api
