@@ -8,6 +8,7 @@ ASR_API_PORT=8067
 API_GATEWAY_PORT=19528
 TEMPLATEBOT_API_PORT=6788
 FRONT_END_LINK="https://devbox.articulateai.cn"
+TTS_VERSION="v2.1"
 
 
 # EDUBOT_WEBSITE_PORT=
@@ -40,6 +41,7 @@ sudo docker run -e FRONT_END_LINK=$FRONT_END_LINK \
                 -e TTS_API=$TTS_API \
                 -e ASR_API=$ASR_API \
                 -e IELTS_BOT_URL=$TEMPLATEBOT_API \
+                -e TTS_VERSION=$TTS_VERSION \
                 -p $API_GATEWAY_PORT:19528 \
                 --name api-gateway-container \
                 api-gateway
