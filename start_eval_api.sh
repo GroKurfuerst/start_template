@@ -15,7 +15,7 @@ done
 
 #Run the container
 sudo docker run -p $EVAL_API_PORT:6001 \
-                -e ASR_API=$ASR_API
+                -e ASR_API=$ASR_API \
                 --gpus all \
                 --name eval-api-container \
                 -v $HOME/data/kaldi:/app/kaldi \
